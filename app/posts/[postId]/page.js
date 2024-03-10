@@ -7,6 +7,10 @@ next: {
     });
     const posts =await response.json();
 return(
-<div><h1>{posts.title}</h1></div>
+    
+<div><h1>UserID = {posts.userId}</h1><h1>{posts.title}</h1>
+<div>{posts.body}</div>
+
+</div>
 );  
 }
