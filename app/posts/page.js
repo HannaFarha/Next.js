@@ -5,11 +5,13 @@ next: {
 
     });
     const posts =await response.json();
+    //console.log(posts);
     const postsJSX =posts.map((post)=>{
 
-        return ( <div><h1>{post.title}</h1></div> );
+        return ( <div><h1>{post.body}</h1></div> );
 })
     
-    
+    return(<div>{postsJSX}</div>)
 }
+
  
