@@ -8,10 +8,16 @@ next: {
     //console.log(posts);
     const postsJSX =posts.map((post)=>{
 
-        return ( <div><h1>{post.body}</h1></div> );
+        return ( <div style={{width :"70%",
+    backgroundColor:"white",
+    borderRadius:"10px",
+marginTop:"20px"}}><h1>{post.body}</h1></div> );
 })
     
-    return(<div>{postsJSX}</div>)
+    return(<div style={{
+        display:"flex",alignItems:"center",justifyContent:"center",flexDirection:"column"
+
+}}>{postsJSX}</div>)
 }
 
  
