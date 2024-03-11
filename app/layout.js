@@ -13,10 +13,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav>
-          <Link style={{margin:"3px"}} href="/">Home</Link>
-          <Link style={{margin:"3px"}} href="/posts">posts</Link>
-          <Link style={{margin:"3px"}} href="/article">Article</Link>
+        <nav style={{display:"flex",justifyContent:"center",alignItem:"center",fontSize:"50px",background:"teal"}}>
+          <Link style={{margin:"30px"}} href="/">Home</Link>
+          <Link style={{margin:"30px"}} href="/posts">posts</Link>
+          <Link style={{margin:"30px"}} href="/article">Article</Link>
         </nav>
         {children}</body>
     </html>
