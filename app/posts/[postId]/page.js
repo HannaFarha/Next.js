@@ -1,16 +1,20 @@
-export default async function detailsId ({params})  {
-    const postId=params.postId;
-    const response = await fetch (`https://jsonplaceholder.typicode.com/posts/${postId}`,{
-next: {
-    revalidate: 120 ,},
+import PostDetails from "@/app/components/postDetails";
+import { Suspense } from "react";
+export default async function PostDetailsPage({ params }) {
+	const postId = params.postId;
 
-    });
-    const posts =await response.json();
-return(
-    
-<div><h1>UserID = {posts.userId}</h1><h1>{posts.title}</h1>
-<div>{posts.body}</div>
+	const loaingJsx = (
+		<div>
+			<h1>wait...</h1>
+		</div>
+	);
+	return (
+		<div style={{ padding: "20px" }}>
+			<h1>Post Details</h1>
 
-</div>
-);  
+			<Suspense fallback={loaingJsx}>
+				<PostDetails postId={postId} />
+			</Suspense>
+		</div>
+	);
 }
